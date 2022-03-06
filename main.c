@@ -1,7 +1,7 @@
 //programma vichislyaet koren uravneniua na otrezke s tochnostiu eps
 #include<stdio.h>
 #include"my_f.h"
-#define eps 0.0001
+#define eps 0.01
 
 int main()  //Gubenko Olesya 112
 {
