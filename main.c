@@ -6,14 +6,20 @@
 int main()  //Gubenko Olesya 112
 {
 	double a, b, c;
-	int i=0, err=0;
+	int i=0, err;
+	printf("Programma vichislyaet koren uravneniua na otrezke s tochnostiu eps metodom hord.\n");
 	printf("Input a, b in section [a, b].\n");
-	scanf("%lf%lf", &a, &b);
-	c = root(fun, a, b, eps, &i, &err);
-	if (err==1)
+	if (scanf("%lf%lf", &a, &b)!=2) {
+		printf("At least one of the ends is not a number, please, try again.\n");
+		return -1;
+	}
+	c = root(fun, a, b, &err);
+	if (err==1) {
 		printf ("Same sign error.\n");
+		return -1;
+	}
 	else
-		printf ("Number of iterations: %d.\nRoot is: %lf.\n\n", i, c);
+		printf ("Root is: %lf.\n", c);
 	return 0;
 }
 

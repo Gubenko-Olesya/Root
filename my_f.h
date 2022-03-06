@@ -1,5 +1,5 @@
 //Gubenko Olesya 112
-double root (double (*fun)(double x), double a, double b, double e, int *i, int *err);
+double root (double (*fun)(double x), double a, double b, int *err);
 
 double fun(double x)
 {
